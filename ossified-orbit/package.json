@@ -1,0 +1,46 @@
+{
+  "name": "ossified-orbit",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@astrojs/react": "^2.1.0",
+    "@astrojs/vercel": "^3.2.0",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "astro": "^2.1.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
+    "astro-eslint-parser": "^0.11.0",
+    "eslint": "^8.35.0",
+    "eslint-plugin-astro": "^0.23.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "prettier": "^2.8.4",
+    "prettier-plugin-astro": "^0.8.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,astro}": [
+      "pnpm prettier -w src/**/*.astro"
+    ],
+    "*.{js,ts,tsx}": [
+      "eslint src/*.{js,jsx,ts,tsx} --fix-dry-run --no-error-on-unmatched-pattern"
+    ],
+    "*.css": [
+      "pnpm prettier -w"
+    ]
+  }
+}

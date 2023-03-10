@@ -1,0 +1,19 @@
+---
+import Wrapper from '../components/Wrapper.astro';
+
+const a = {
+  title: 'Hello, World!',
+  author: 'Matthew Phillips',
+  date: '09 Aug 2022',
+};
+---
+
+<Wrapper title="Fred's Page">
+  <img
+    src='https://patterns.dev/img/reactjs/react-logo@3x.svg'
+    slot='after-header'
+  />
+  <h3>All about Fred</h3>
+  <p>Here is some stuff about Fred.</p>
+  <p slot='after-footer'>Copyright 2022</p>
+</Wrapper>

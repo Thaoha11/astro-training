@@ -1,0 +1,23 @@
+---
+import type { MarkdownLayoutProps } from 'astro';
+
+type Props = MarkdownLayoutProps<{
+  title: string;
+  author: string;
+  date: string;
+}>;
+
+const { frontmatter } = Astro.props;
+console.log('1', frontmatter);
+---
+
+<html>
+  <head>
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <h1>{frontmatter.title} by {frontmatter.author}</h1>
+    <slot />
+    <p>Written on: {frontmatter.date}</p>
+  </body>
+</html>
